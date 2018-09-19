@@ -1,5 +1,10 @@
-\documentclass[titlepage]{article}
-\usepackage{graphicx}
+\documentclass[titlepage]{article} %so that we have an extra title page
+\usepackage{graphicx}% for figure
+\usepackage{amsmath}% for maths
+\usepackage{booktabs} % don't remember
+\usepackage[table]{xcolor} %for cell color
+\usepackage{hhline} %so that cell color doesn't overlap cell border
+\usepackage{multirow} %for multirow
 \begin{document}
 \title{RMIT-Assignment 1,2 Combined}
 \author
@@ -27,6 +32,30 @@ This is first subsection
 \end{figure}
 \section{Equation}
 Comma at the end is added because it is also present in the required equation
-$$f(x) = \frac{1}{2}a_{0} + \sum_{n=1}^{\infty}a_n cos(nx) + \sum_{n=1}^{\infty} b_n sin(nx),$$
-\tablename{Haha}
+$$f(x) = \frac{1}{2}a_0 + \sum_{n=1}^{\infty}a_n cos(nx) + \sum_{n=1}^{\infty} b_n sin(nx),$$
+\\\\\\
+\section{Table}
+\begin{table}[ht]
+		\centering
+		\def\arraystretch{1.5} %cell height
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+				\cellcolor[gray]{.8} & \cellcolor[gray]{.8}Foods/Drinks/ & \cellcolor[gray]{.8}Clothing/ & \cellcolor[gray]{.8}Leisure/ \\
+				\multirow{-2}{*}{\cellcolor[gray]{.8}Country} &
+				\cellcolor[gray]{0.8}Tobacco & \cellcolor[gray]{0.8}Footwear & \cellcolor[gray]{0.8}Education\\ 
+	
+				\hline \cellcolor[gray]{.8}Ireland  & 28.91\% & 6.43\% & 2.21\%\\
+				\hline \cellcolor[gray]{.8}Italy 	& 16.36\% & 9.00\% & 3.20\%\\
+				\hline \cellcolor[gray]{.8}Spain 	& 18.80\% & 6.51\% & 1.98\%\\
+				\hline \cellcolor[gray]{.8}Sweden	& 15.77\% & 5.40\% & 3.22\%\\
+				\hline \cellcolor[gray]{.8}Turkey 	& 32.14\% & 6.63\% & 4.35\%\\
+			\hline
+		\end{tabular}
+\end{table}
 \end{document}
+%\begin{tabular}{@{}c@{}}Foods/Drinks/ \\ Tobacco\end{tabular}\cellcolor[gray]{.8} &
+%Ireland\cellcolor[gray]{.8} & 28.91\% & 6.43\% & 2.21\%\\\hline
+%Italy\cellcolor[gray]{.8} 	& 16.36\% & 9.00\% & 3.20\%\\\hline
+%Spain\cellcolor[gray]{.8} 	& 18.80\% & 6.51\% & 1.98\%\\\hline
+%Sweden\cellcolor[gray]{.8} 	& 15.77\% & 5.40\% & 3.22\%\\\hline
+%Turkey\cellcolor[gray]{.8} 	& 32.14\% & 6.63\% & 4.35\%\\\hline
